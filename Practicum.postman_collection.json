@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "3fd1f4b8-f704-46c0-8ad6-8dfb4fc37ad7",
+		"name": "Practicum",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "generate_report",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "5f55e6c0-e9e5-4a9c-b313-63c01fc31460",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "X-API-KEY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "5f55e6c0-e9e5-4a9c-b313-63c01fc31460",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://d5dn6l0v3iv2jjn14s6c.apigw.yandexcloud.net/generate_report?start_date=2021-01-01T00:00:00&end_date=2021-02-02T00:00:00",
+					"protocol": "https",
+					"host": [
+						"d5dn6l0v3iv2jjn14s6c",
+						"apigw",
+						"yandexcloud",
+						"net"
+					],
+					"path": [
+						"generate_report"
+					],
+					"query": [
+						{
+							"key": "start_date",
+							"value": "2021-01-01T00:00:00"
+						},
+						{
+							"key": "end_date",
+							"value": "2021-02-02T00:00:00"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_report",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "5f55e6c0-e9e5-4a9c-b313-63c01fc31460",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "X-API-KEY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://d5dn6l0v3iv2jjn14s6c.apigw.yandexcloud.net/get_report?report_id=MjAyMS0wMS0wMVQwMDowMDowMAkyMDIyLTAyLTAyVDAwOjAwOjAwCTIwMjItMDQtMDVUMjA6Mzk6MDg=",
+					"protocol": "https",
+					"host": [
+						"d5dn6l0v3iv2jjn14s6c",
+						"apigw",
+						"yandexcloud",
+						"net"
+					],
+					"path": [
+						"get_report"
+					],
+					"query": [
+						{
+							"key": "report_id",
+							"value": "MjAyMS0wMS0wMVQwMDowMDowMAkyMDIyLTAyLTAyVDAwOjAwOjAwCTIwMjItMDQtMDVUMjA6Mzk6MDg="
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
