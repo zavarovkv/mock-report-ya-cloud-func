@@ -1,0 +1,70 @@
+openapi: 3.0.0
+info:
+  title: API for get data
+  version: 1.0.0
+servers:
+- url: https://d5dn6l0v3iv2jjn14s6c.apigw.yandexcloud.net
+paths:
+  /generate_report:
+    post:
+      x-yc-apigateway-integration:
+        type: cloud_functions
+        function_id: d4ev5sod7rn24bis95bc
+      operationId: generate_report
+      parameters:
+      - description: Start date
+        explode: true
+        in: query
+        name: start_date
+        required: true
+        schema:
+          default: '2020-07-21T17:32:28Z'
+          type: string
+        style: form
+      - description: End date
+        explode: true
+        in: query
+        name: end_date
+        required: true
+        schema:
+          default: '2020-08-21T17:32:28Z'
+          type: string
+        style: form
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  report_id:
+                    type: string
+          description: Greeting
+  /get_report:
+    get:
+      x-yc-apigateway-integration:
+        type: cloud_functions
+        function_id: d4ev5sod7rn24bis95bc
+      operationId: get_report
+      parameters:
+      - description: Report ID
+        explode: true
+        in: query
+        name: report_id
+        required: true
+        schema:
+          type: string
+        style: form
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  data:
+                    type: string
+                  id:
+                    type: string
+                  status:
+                    type: string
+          description: Greeting
+      summary: Generate report
