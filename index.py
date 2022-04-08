@@ -106,7 +106,7 @@ def get_report(event, context):
     delta = (curr_date - request_date).total_seconds()
 
     if delta < Config.DELAY_SECONDS:
-        status = 'RANNING'
+        status = 'RUNNING'
     else:
         status = 'SUCCESS'
 
